@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Members - OU Hiking Club Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <div class="nav-brand">OU Hiking Club Admin</div>
+                <div class="nav-links">
+                    <a href="index.html">Dashboard</a>
+                    <a href="hikes.html">Hikes</a>
+                    <a href="events.html">Social Events</a>
+                    <a href="members.html" class="active">Members</a>
+                    <a href="news.html">News</a>
+                    <a href="announcements.html">Announcements</a>
+                    <a href="#" class="logout">Logout</a>
+                </div>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Manage Members</h1>
+            
+            <div class="tabs">
+                <button class="tab-button active">New Requests</button>
+                <button class="tab-button">Active Members</button>
+                <button class="tab-button">Inactive Members</button>
+            </div>
+
+            <!-- New Member Requests -->
+            <div class="tab-content" id="newRequests">
+                <h2>New Member Requests</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Membership Type</th>
+                            <th>Payment Method</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>john.smith@email.com</td>
+                            <td>Standard</td>
+                            <td>PayPal</td>
+                            <td>
+                                <button>View</button>
+                                <button>Approve</button>
+                                <button>Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Member Details Form (Initially Hidden) -->
+            <div class="modal" id="memberForm" style="display: none;">
+                <h2>Member Details</h2>
+                <form class="form-group">
+                    <div class="form-group">
+                        <label for="forename">Forename</label>
+                        <input type="text" id="forename" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Home Address</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emergency">Emergency Contact Number</label>
+                        <input type="tel" id="emergency" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="membershipType">Membership Option</label>
+                        <select id="membershipType" required>
+                            <option value="standard">Standard</option>
+                            <option value="student">Student</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select id="paymentMethod" required>
+                            <option value="card">Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="cash">Cash</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="autoRenewal">
+                            Automatic Renewal
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="emailConsent">
+                            Consent to Receive Emails
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="isActive">
+                            Active Member
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="action-button">Save Changes</button>
+                        <button type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>OU Hiking Club Admin Panel</p>
+        </footer>
+    </div>
+</body>
+</html> 
