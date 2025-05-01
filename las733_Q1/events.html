@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Social Events - OU Hiking Club Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <div class="nav-brand">OU Hiking Club Admin</div>
+                <div class="nav-links">
+                    <a href="index.html">Dashboard</a>
+                    <a href="hikes.html">Hikes</a>
+                    <a href="events.html" class="active">Social Events</a>
+                    <a href="members.html">Members</a>
+                    <a href="news.html">News</a>
+                    <a href="announcements.html">Announcements</a>
+                    <a href="#" class="logout">Logout</a>
+                </div>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Manage Social Events</h1>
+            
+            <div class="action-bar">
+                <button class="action-button">Add Social Event</button>
+            </div>
+
+            <h2>Upcoming Social Events</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Cost</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Summer BBQ</td>
+                        <td>15/07/2025</td>
+                        <td>City Park</td>
+                        <td>£10</td>
+                        <td>
+                            <button>View</button>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Add/Edit Social Event Form (Initially Hidden) -->
+            <div class="modal" id="eventForm" style="display: none;">
+                <h2>Add/Edit Social Event</h2>
+                <form class="form-group">
+                    <div class="form-group">
+                        <label for="eventName">Event Name</label>
+                        <input type="text" id="eventName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventType">Event Type</label>
+                        <input type="text" id="eventType" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventDate">Date</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="startTime">Start Time</label>
+                        <input type="time" id="startTime" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="duration">Duration (hours)</label>
+                        <input type="number" id="duration" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cost">Cost (£)</label>
+                        <input type="number" id="cost" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maxSize">Maximum Group Size</label>
+                        <input type="number" id="maxSize" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactPerson">Contact Person</label>
+                        <input type="text" id="contactPerson" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="action-button">Save Event</button>
+                        <button type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>OU Hiking Club Admin Panel</p>
+        </footer>
+    </div>
+</body>
+</html> 
