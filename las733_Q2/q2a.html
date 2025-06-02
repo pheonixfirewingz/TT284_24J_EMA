@@ -1,16 +1,27 @@
+<!--
+    File: q2a.html
+    Description: Create Announcement form for OU Hiking Club Admin Panel - Desktop Version
+    Author: Luke A Shore
+    Date: 2025
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information for proper rendering and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Announcement - OU Hiking Club Admin</title>
+    <!-- Link to desktop-specific stylesheet -->
     <link rel="stylesheet" href="q2a.css">
 </head>
 <body>
     <div class="container">
+        <!-- Header section containing main navigation -->
         <header>
+            <!-- Main navigation bar with desktop layout -->
             <nav class="main-nav">
                 <div class="nav-brand">OU Hiking Club Admin</div>
+                <!-- Navigation links for different sections -->
                 <div class="nav-links">
                     <a href="#" class="nav-link">Dashboard</a>
                     <a href="#" class="nav-link">Hikes</a>
@@ -19,16 +30,21 @@
                     <a href="#" class="nav-link">News</a>
                     <a href="#" class="nav-link active" aria-current="page">Announcements</a>
                 </div>
+                <!-- Mobile menu toggle (hidden in desktop view) -->
                 <button class="mobile-menu" aria-label="Toggle navigation menu">☰</button>
             </nav>
         </header>
 
+        <!-- Main content area -->
         <main>
             <h1>Create Announcement</h1>
             
+            <!-- Announcement creation form -->
             <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post" class="announcement-form">
+                <!-- Hidden session identifier -->
                 <input type="hidden" name="SessionIdentifier" value="db34-af22-bcda6836-8070">
                 
+                <!-- Title input section -->
                 <div class="form-group">
                     <label for="title">Title (max 10 words)</label>
                     <input type="text" id="title" name="title" maxlength="100" required 
@@ -36,6 +52,7 @@
                     <small id="titleHelp">Enter a clear, concise title for your announcement</small>
                 </div>
                 
+                <!-- Message content section -->
                 <div class="form-group">
                     <label for="content">Message Content</label>
                     <textarea id="content" name="content" rows="6" required 
@@ -43,11 +60,13 @@
                     <small id="contentHelp">Enter the main content of your announcement</small>
                 </div>
                 
+                <!-- Sender information section -->
                 <div class="form-group">
                     <label for="senderName">Sender's Name</label>
                     <input type="text" id="senderName" name="senderName" required>
                 </div>
                 
+                <!-- Schedule datetime section -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="scheduleDate">Schedule Date</label>
@@ -60,6 +79,7 @@
                     </div>
                 </div>
                 
+                <!-- Priority selection section -->
                 <div class="form-group">
                     <label for="priority">Priority</label>
                     <select id="priority" name="priority" required>
@@ -70,6 +90,7 @@
                     </select>
                 </div>
                 
+                <!-- File attachment section -->
                 <div class="form-group">
                     <label for="attachment">Attachment</label>
                     <input type="file" id="attachment" name="attachment" 
@@ -77,10 +98,12 @@
                     <small id="attachmentHelp">Optional - Single file only (.pdf, .doc, .docx, .txt)</small>
                 </div>
                 
+                <!-- Information notice -->
                 <div class="form-info">
                     <p>This announcement will be sent to all members who have consented to receive emails.</p>
                 </div>
                 
+                <!-- Form action buttons -->
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">Schedule Announcement</button>
                     <button type="reset" class="btn btn-secondary">Clear Form</button>
@@ -88,6 +111,7 @@
             </form>
         </main>
 
+        <!-- Footer section -->
         <footer>
             <p>OU Hiking Club Admin Panel</p>
         </footer>

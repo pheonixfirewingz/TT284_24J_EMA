@@ -1,16 +1,27 @@
+<!--
+    File: announcements.html
+    Description: Announcements management page for OU Hiking Club Admin Panel
+    Author: Luke A Shore
+    Date: 2025
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information for proper rendering and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Announcements - OU Hiking Club Admin</title>
+    <!-- Link to shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Header section containing main navigation -->
         <header>
+            <!-- Main navigation bar -->
             <nav class="main-nav">
                 <div class="nav-brand">OU Hiking Club Admin</div>
+                <!-- Navigation links for different sections -->
                 <div class="nav-links">
                     <a href="index.html">Dashboard</a>
                     <a href="hikes.html">Hikes</a>
@@ -20,17 +31,21 @@
                     <a href="announcements.html" class="active">Announcements</a>
                     <a href="#" class="logout">Logout</a>
                 </div>
+                <!-- Mobile menu toggle -->
                 <div class="mobile-menu">☰</div>
             </nav>
         </header>
 
+        <!-- Main content area -->
         <main>
             <h1>Manage Announcements</h1>
             
+            <!-- Action bar for primary actions -->
             <div class="action-bar">
                 <button class="action-button">Create Announcement</button>
             </div>
 
+            <!-- Scheduled announcements section -->
             <h2>Scheduled Announcements</h2>
             <table class="data-table">
                 <thead>
@@ -43,6 +58,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Example announcement row -->
                     <tr>
                         <td>Important Safety Guidelines Update</td>
                         <td>Safety Officer</td>
@@ -57,10 +73,11 @@
                 </tbody>
             </table>
 
-            <!-- Create/Edit Announcement Form (Initially Hidden) -->
+            <!-- Modal form for creating/editing announcements -->
             <div class="modal" id="announcementForm" style="display: none;">
                 <h2>Create/Edit Announcement</h2>
                 <form class="form-group">
+                    <!-- Announcement content -->
                     <div class="form-group">
                         <label for="title">Title (max 10 words)</label>
                         <input type="text" id="title" maxlength="100" required>
@@ -71,11 +88,13 @@
                         <textarea id="content" rows="6" required></textarea>
                     </div>
                     
+                    <!-- Sender information -->
                     <div class="form-group">
                         <label for="senderName">Sender's Name</label>
                         <input type="text" id="senderName" required>
                     </div>
                     
+                    <!-- Schedule settings -->
                     <div class="form-group">
                         <label for="scheduleDate">Schedule Date</label>
                         <input type="date" id="scheduleDate" required>
@@ -86,6 +105,7 @@
                         <input type="time" id="scheduleTime" required>
                     </div>
                     
+                    <!-- Priority and attachment settings -->
                     <div class="form-group">
                         <label for="priority">Priority</label>
                         <select id="priority" required>
@@ -101,10 +121,12 @@
                         <small>Optional - Single file only</small>
                     </div>
                     
+                    <!-- Information notice -->
                     <div class="form-group">
                         <p>This announcement will be sent to all members who have consented to receive emails.</p>
                     </div>
                     
+                    <!-- Form action buttons -->
                     <div class="form-actions">
                         <button type="submit" class="action-button">Schedule Announcement</button>
                         <button type="button">Cancel</button>
@@ -113,6 +135,7 @@
             </div>
         </main>
 
+        <!-- Footer section -->
         <footer>
             <p>OU Hiking Club Admin Panel</p>
         </footer>

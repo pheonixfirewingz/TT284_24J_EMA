@@ -1,4 +1,13 @@
-/* Reset and base styles */
+/*
+ * File: q2b.css
+ * Description: Mobile-first stylesheet for the OU Hiking Club Admin Panel's announcement creation form
+ * Author: Luke A Shore
+ * Date: 2025
+ */
+
+/* Reset and base styles 
+ * Removes default browser styling and sets up basic styling environment
+ */
 * {
     margin: 0;
     padding: 0;
@@ -18,17 +27,25 @@ body {
     padding: 0 1rem;
 }
 
-/* Header and Navigation */
+/* Header and Navigation Styles
+ * Mobile-first navigation with collapsible menu
+ */
 header {
     background-color: #2c3e50;
     padding: 1rem 0;
     margin-bottom: 1rem;
 }
 
+/* Main navigation container
+ * Full-width for mobile devices
+ */
 .main-nav {
     width: 100%;
 }
 
+/* Top navigation bar
+ * Contains brand and menu toggle button
+ */
 .nav-top {
     display: flex;
     justify-content: space-between;
@@ -36,12 +53,16 @@ header {
     padding: 0 1rem;
 }
 
+/* Navigation brand/logo styling */
 .nav-brand {
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
+/* Navigation links container
+ * Hidden by default on mobile, shown when menu is toggled
+ */
 .nav-links {
     display: none; /* Hidden by default on mobile */
     flex-direction: column;
@@ -50,6 +71,9 @@ header {
     background-color: #34495e;
 }
 
+/* Individual navigation link styling
+ * Full-width links for mobile view
+ */
 .nav-link {
     color: #fff;
     text-decoration: none;
@@ -59,6 +83,7 @@ header {
     transition: background-color 0.3s;
 }
 
+/* Navigation link states */
 .nav-link:hover,
 .nav-link:focus {
     background-color: #3498db;
@@ -69,6 +94,9 @@ header {
     background-color: #3498db;
 }
 
+/* Mobile menu toggle button
+ * Visible only on mobile devices
+ */
 .mobile-menu {
     display: block;
     background: none;
@@ -79,7 +107,9 @@ header {
     padding: 0.5rem;
 }
 
-/* Main content */
+/* Main Content Area
+ * Mobile-optimized card layout
+ */
 main {
     background-color: #fff;
     padding: 1rem;
@@ -88,21 +118,28 @@ main {
     margin-bottom: 1rem;
 }
 
+/* Page title styling */
 h1 {
     color: #2c3e50;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 }
 
-/* Form styles */
+/* Form Styles
+ * Mobile-first form layout with full-width inputs
+ */
 .announcement-form {
     width: 100%;
 }
 
+/* Form group container
+ * Vertical stacking for mobile view
+ */
 .form-group {
     margin-bottom: 1.25rem;
 }
 
+/* Form label styling */
 label {
     display: block;
     margin-bottom: 0.5rem;
@@ -110,6 +147,9 @@ label {
     color: #2c3e50;
 }
 
+/* Form input elements
+ * Full-width inputs optimized for touch
+ */
 input[type="text"],
 input[type="date"],
 input[type="time"],
@@ -123,16 +163,19 @@ textarea {
     transition: border-color 0.3s;
 }
 
+/* File input specific styling */
 input[type="file"] {
     width: 100%;
     padding: 0.5rem 0;
 }
 
+/* Textarea specific styling */
 textarea {
     resize: vertical;
     min-height: 100px;
 }
 
+/* Form element focus states */
 input:focus,
 select:focus,
 textarea:focus {
@@ -141,6 +184,7 @@ textarea:focus {
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
+/* Help text styling */
 small {
     display: block;
     color: #666;
@@ -148,6 +192,7 @@ small {
     font-size: 0.875rem;
 }
 
+/* Information box styling */
 .form-info {
     background-color: #f8f9fa;
     padding: 1rem;
@@ -155,17 +200,24 @@ small {
     margin-bottom: 1.25rem;
 }
 
+/* Information text styling */
 .form-info p {
     color: #666;
     font-size: 0.9rem;
 }
 
+/* Form action buttons container
+ * Vertical stacking for mobile view
+ */
 .form-actions {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
 
+/* Button base styles
+ * Full-width buttons for mobile
+ */
 .btn {
     width: 100%;
     padding: 0.75rem;
@@ -176,40 +228,48 @@ small {
     transition: background-color 0.3s;
 }
 
+/* Primary button styling */
 .btn-primary {
     background-color: #3498db;
     color: #fff;
 }
 
+/* Primary button states */
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #2980b9;
 }
 
+/* Secondary button styling */
 .btn-secondary {
     background-color: #95a5a6;
     color: #fff;
 }
 
+/* Secondary button states */
 .btn-secondary:hover,
 .btn-secondary:focus {
     background-color: #7f8c8d;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 1rem 0;
     color: #666;
 }
 
-/* Focus styles for accessibility */
+/* Accessibility Focus Styles
+ * High visibility focus indicators
+ */
 :focus {
     outline: 2px solid #3498db;
     outline-offset: 2px;
 }
 
-/* High contrast mode support */
+/* High Contrast Mode Support
+ * Ensures visibility in Windows high contrast mode
+ */
 @media (forced-colors: active) {
     .btn {
         border: 1px solid currentColor;
@@ -220,17 +280,22 @@ footer {
     }
 }
 
-/* Laptop styles (1024px) */
+/* Desktop/Laptop Styles (1024px and above)
+ * Responsive enhancements for larger screens
+ */
 @media screen and (min-width: 1024px) {
+    /* Container width constraint */
     .container {
         max-width: 1024px;
         padding: 0 2rem;
     }
 
+    /* Hide mobile menu button */
     .mobile-menu {
         display: none;
     }
 
+    /* Desktop navigation layout */
     .main-nav {
         display: flex;
         justify-content: space-between;
@@ -238,6 +303,7 @@ footer {
         padding: 0 2rem;
     }
 
+    /* Show navigation links horizontally */
     .nav-links {
         display: flex !important;
         flex-direction: row;
@@ -246,6 +312,7 @@ footer {
         width: auto;
     }
 
+    /* Adjust navigation link padding */
     .nav-link {
         padding: 0.5rem 1rem;
     }

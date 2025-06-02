@@ -1,16 +1,27 @@
+<!--
+    File: events.html
+    Description: Social Events management page for OU Hiking Club Admin Panel
+    Author: Luke A Shore
+    Date: 2025
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information for proper rendering and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Social Events - OU Hiking Club Admin</title>
+    <!-- Link to shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Header section containing main navigation -->
         <header>
+            <!-- Main navigation bar -->
             <nav class="main-nav">
                 <div class="nav-brand">OU Hiking Club Admin</div>
+                <!-- Navigation links for different sections -->
                 <div class="nav-links">
                     <a href="index.html">Dashboard</a>
                     <a href="hikes.html">Hikes</a>
@@ -20,17 +31,21 @@
                     <a href="announcements.html">Announcements</a>
                     <a href="#" class="logout">Logout</a>
                 </div>
+                <!-- Mobile menu toggle -->
                 <div class="mobile-menu">☰</div>
             </nav>
         </header>
 
+        <!-- Main content area -->
         <main>
             <h1>Manage Social Events</h1>
             
+            <!-- Action bar for primary actions -->
             <div class="action-bar">
                 <button class="action-button">Add Social Event</button>
             </div>
 
+            <!-- Upcoming events section -->
             <h2>Upcoming Social Events</h2>
             <table class="data-table">
                 <thead>
@@ -43,6 +58,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Example event row -->
                     <tr>
                         <td>Summer BBQ</td>
                         <td>15/07/2025</td>
@@ -57,10 +73,11 @@
                 </tbody>
             </table>
 
-            <!-- Add/Edit Social Event Form (Initially Hidden) -->
+            <!-- Modal form for adding/editing social events -->
             <div class="modal" id="eventForm" style="display: none;">
                 <h2>Add/Edit Social Event</h2>
                 <form class="form-group">
+                    <!-- Basic event information -->
                     <div class="form-group">
                         <label for="eventName">Event Name</label>
                         <input type="text" id="eventName" required>
@@ -71,6 +88,7 @@
                         <input type="text" id="eventType" required>
                     </div>
                     
+                    <!-- Date and time details -->
                     <div class="form-group">
                         <label for="eventDate">Date</label>
                         <input type="date" id="eventDate" required>
@@ -86,6 +104,7 @@
                         <input type="number" id="duration" required>
                     </div>
                     
+                    <!-- Location and logistics -->
                     <div class="form-group">
                         <label for="location">Location</label>
                         <input type="text" id="location" required>
@@ -96,6 +115,7 @@
                         <input type="number" id="cost" step="0.01" required>
                     </div>
                     
+                    <!-- Attendance details -->
                     <div class="form-group">
                         <label for="maxSize">Maximum Group Size</label>
                         <input type="number" id="maxSize" required>
@@ -106,6 +126,7 @@
                         <input type="text" id="contactPerson" required>
                     </div>
                     
+                    <!-- Form action buttons -->
                     <div class="form-actions">
                         <button type="submit" class="action-button">Save Event</button>
                         <button type="button">Cancel</button>
@@ -114,6 +135,7 @@
             </div>
         </main>
 
+        <!-- Footer section -->
         <footer>
             <p>OU Hiking Club Admin Panel</p>
         </footer>

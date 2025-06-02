@@ -1,16 +1,27 @@
+<!--
+    File: index.html
+    Description: Admin dashboard for the OU Hiking Club website
+    Author: Luke Luke A Shore
+    Date: 2024
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information for proper rendering and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OU Hiking Club Admin</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Header section containing main navigation -->
         <header>
+            <!-- Main navigation bar with responsive menu -->
             <nav class="main-nav">
                 <div class="nav-brand">OU Hiking Club Admin</div>
+                <!-- Navigation links for different sections -->
                 <div class="nav-links">
                     <a href="index.html" class="active">Dashboard</a>
                     <a href="hikes.html">Hikes</a>
@@ -20,14 +31,18 @@
                     <a href="announcements.html">Announcements</a>
                     <a href="#" class="logout">Logout</a>
                 </div>
+                <!-- Mobile menu toggle button -->
                 <div class="mobile-menu">☰</div>
             </nav>
         </header>
 
+        <!-- Main content area -->
         <main>
             <h1>Admin Dashboard</h1>
             
+            <!-- Dashboard grid containing overview cards -->
             <div class="dashboard-grid">
+                <!-- Hikes management card -->
                 <div class="dashboard-card">
                     <h2>Hikes</h2>
                     <div class="stats">
@@ -37,6 +52,7 @@
                     <a href="hikes.html" class="action-button">Manage Hikes</a>
                 </div>
 
+                <!-- Social Events management card -->
                 <div class="dashboard-card">
                     <h2>Social Events</h2>
                     <div class="stats">
@@ -45,6 +61,7 @@
                     <a href="events.html" class="action-button">Manage Events</a>
                 </div>
 
+                <!-- Members management card -->
                 <div class="dashboard-card">
                     <h2>Members</h2>
                     <div class="stats">
@@ -54,6 +71,7 @@
                     <a href="members.html" class="action-button">Manage Members</a>
                 </div>
 
+                <!-- News management card -->
                 <div class="dashboard-card">
                     <h2>News</h2>
                     <div class="stats">
@@ -62,6 +80,7 @@
                     <a href="news.html" class="action-button">Manage News</a>
                 </div>
 
+                <!-- Announcements management card -->
                 <div class="dashboard-card">
                     <h2>Announcements</h2>
                     <div class="stats">
@@ -72,6 +91,7 @@
             </div>
         </main>
 
+        <!-- Footer section -->
         <footer>
             <p>OU Hiking Club Admin Panel</p>
         </footer>

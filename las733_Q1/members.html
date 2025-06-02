@@ -1,16 +1,27 @@
+<!--
+    File: members.html
+    Description: Members management page for OU Hiking Club Admin Panel
+    Author: Luke A Shore
+    Date: 2025
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information for proper rendering and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Members - OU Hiking Club Admin</title>
+    <!-- Link to shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Header section containing main navigation -->
         <header>
+            <!-- Main navigation bar -->
             <nav class="main-nav">
                 <div class="nav-brand">OU Hiking Club Admin</div>
+                <!-- Navigation links for different sections -->
                 <div class="nav-links">
                     <a href="index.html">Dashboard</a>
                     <a href="hikes.html">Hikes</a>
@@ -20,20 +31,23 @@
                     <a href="announcements.html">Announcements</a>
                     <a href="#" class="logout">Logout</a>
                 </div>
+                <!-- Mobile menu toggle -->
                 <div class="mobile-menu">☰</div>
             </nav>
         </header>
 
+        <!-- Main content area -->
         <main>
             <h1>Manage Members</h1>
             
+            <!-- Tab navigation for different member lists -->
             <div class="tabs">
                 <button class="tab-button active">New Requests</button>
                 <button class="tab-button">Active Members</button>
                 <button class="tab-button">Inactive Members</button>
             </div>
 
-            <!-- New Member Requests -->
+            <!-- New member requests section -->
             <div class="tab-content" id="newRequests">
                 <h2>New Member Requests</h2>
                 <table class="data-table">
@@ -47,6 +61,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Example member request row -->
                         <tr>
                             <td>John Smith</td>
                             <td>john.smith@email.com</td>
@@ -62,10 +77,11 @@
                 </table>
             </div>
 
-            <!-- Member Details Form (Initially Hidden) -->
+            <!-- Modal form for viewing/editing member details -->
             <div class="modal" id="memberForm" style="display: none;">
                 <h2>Member Details</h2>
                 <form class="form-group">
+                    <!-- Personal information section -->
                     <div class="form-group">
                         <label for="forename">Forename</label>
                         <input type="text" id="forename" required>
@@ -81,6 +97,7 @@
                         <input type="date" id="dob" required>
                     </div>
                     
+                    <!-- Contact information section -->
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" required>
@@ -101,6 +118,7 @@
                         <input type="tel" id="emergency" required>
                     </div>
                     
+                    <!-- Membership details section -->
                     <div class="form-group">
                         <label for="membershipType">Membership Option</label>
                         <select id="membershipType" required>
@@ -119,6 +137,7 @@
                         </select>
                     </div>
                     
+                    <!-- Preferences and settings section -->
                     <div class="form-group">
                         <label>
                             <input type="checkbox" id="autoRenewal">
@@ -140,6 +159,7 @@
                         </label>
                     </div>
                     
+                    <!-- Form action buttons -->
                     <div class="form-actions">
                         <button type="submit" class="action-button">Save Changes</button>
                         <button type="button">Cancel</button>
@@ -148,6 +168,7 @@
             </div>
         </main>
 
+        <!-- Footer section -->
         <footer>
             <p>OU Hiking Club Admin Panel</p>
         </footer>
